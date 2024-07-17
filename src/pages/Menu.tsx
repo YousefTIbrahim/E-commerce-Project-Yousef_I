@@ -1,4 +1,4 @@
-import menuItems from "../data/menu_test.json"
+import menuItems from "../data/menu_data.json"
 import { Col, Row } from "react-bootstrap"
 import { MenuItem } from "../components/MenuItem"
 export function Menu() {
