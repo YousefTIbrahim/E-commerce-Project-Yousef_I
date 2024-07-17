@@ -5,22 +5,25 @@ import { Navbar } from "./components/Navbar";
 import { Home } from "./pages/Home";
 import { Menu } from "./pages/Menu";
 import { Cart } from "./pages/Cart";
+import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 
 
 
 
 function App() {
 
-  return <Container className="mb-4">
-    <div className="App">
-        <Navbar></Navbar>
-        <Routes>
+  return (
+  <ShoppingCartProvider>
+    <Navbar />
+    <Container className="mb-4">
+         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />}/>
           <Route path="/cart" element={<Cart />}/>
         </Routes>
-    </div>
-  </Container>
+    </Container>
+  </ShoppingCartProvider>
+  )
 }
 
 export default App
