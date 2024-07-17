@@ -1,0 +1,21 @@
+[
+        {
+          "id": 1,
+          "name": "Classic Cheeseburger",
+          "imageUrl": "https://media.istockphoto.com/id/1309352410/photo/cheeseburger-with-tomato-and-lettuce-on-wooden-board.jpg?s=612x612&w=0&k=20&c=lfsA0dHDMQdam2M1yvva0_RXfjAyp4gyLtx4YUJmXgg=",
+          "price": 8
+        },
+        {
+          "id": 2,
+          "name": "Bacon Burger",
+          "imageUrl": "https://example.com/bacon-burger.jpg",
+          "price": 10
+        },
+        {
+          "id": 3,
+          "name": "Veggie Burger",
+          "imageUrl": "https://example.com/veggie-burger.jpg",
+          "price": 7
+        }
+      ]
+   
