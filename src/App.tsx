@@ -2,7 +2,7 @@
 import { Routes, Route } from "react-router-dom"
 import { Container } from "react-bootstrap"
 import { Navbar } from "./components/Navbar";
-import { Home } from "./pages/Home";
+import { Welcome } from "./pages/Welcome";
 import { Menu } from "./pages/Menu";
 import { Cart } from "./pages/Cart";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
@@ -17,7 +17,7 @@ function App() {
     <Navbar />
     <Container className="mb-4">
          <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Welcome />} />
           <Route path="/menu" element={<Menu />}/>
           <Route path="/cart" element={<Cart />}/>
         </Routes>
