@@ -11,7 +11,7 @@
         },
         {
           "id": 2,
-          "name": "Bacon Burger",
+          "name": "Double Burger",
           "imageUrl": "https://example.com/bacon-burger.jpg",
           "price": 10
         },
@@ -101,13 +101,13 @@
       "items": [
         {
           "id": 13,
-          "name": "Chocolate Cake",
+          "name": "Ice Cream",
           "imageUrl": "https://about.kaiserpermanente.org/content/dam/kp/mykp/images/photos/things/blueberry-smoothie.jpg",
-          "price": 5
+          "price": 3
         },
         {
           "id": 14,
-          "name": "Ice Cream",
+          "name": "Red Velvet Cake",
           "imageUrl": "https://example.com/ice-cream.jpg",
           "price": 4
         },
