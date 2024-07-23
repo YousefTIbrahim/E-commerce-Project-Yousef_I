@@ -1,123 +1,170 @@
 [
-    {
-      "id": 1,
-      "title": "Burgers",
-      "items": [
-        {
-          "id": 1,
-          "name": "Classic Cheeseburger",
-          "imageUrl": "https://media.istockphoto.com/id/1309352410/photo/cheeseburger-with-tomato-and-lettuce-on-wooden-board.jpg?s=612x612&w=0&k=20&c=lfsA0dHDMQdam2M1yvva0_RXfjAyp4gyLtx4YUJmXgg=",
-          "price": 8
-        },
-        {
-          "id": 2,
-          "name": "Double Burger",
-          "imageUrl": "https://example.com/bacon-burger.jpg",
-          "price": 10
-        },
-        {
-          "id": 3,
-          "name": "Veggie Burger",
-          "imageUrl": "https://example.com/veggie-burger.jpg",
-          "price": 7
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "title": "Fries",
-      "items": [
-        {
-          "id": 4,
-          "name": "Classic Fries",
-          "imageUrl": "https://www.tastingtable.com/img/gallery/the-origin-of-french-fries-might-surprise-you/intro-1697912707.jpg",
-          "price": 3
-        },
-        {
-          "id": 5,
-          "name": "Curly Fries",
-          "imageUrl": "https://example.com/curly-fries.jpg",
-          "price": 4
-        },
-        {
-          "id": 6,
-          "name": "Sweet Potato Fries",
-          "imageUrl": "https://example.com/sweet-potato-fries.jpg",
-          "price": 4
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "title": "Chicken Sandwich",
-      "items": [
-        {
-          "id": 7,
-          "name": "Classic Chicken Sandwich",
-          "imageUrl": "https://broccyourbody.com/wp-content/uploads/2021/05/A7173EAD-244C-48B6-80C3-BD906DC77C2E-scaled.jpeg",
-          "price": 7
-        },
-        {
-          "id": 8,
-          "name": "Spicy Chicken Sandwich",
-          "imageUrl": "https://example.com/spicy-chicken-sandwich.jpg",
-          "price": 8
-        },
-        {
-          "id": 9,
-          "name": "Grilled Chicken Sandwich",
-          "imageUrl": "https://example.com/grilled-chicken-sandwich.jpg",
-          "price": 7
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "title": "Drinks",
-      "items": [
-        {
-          "id": 10,
-          "name": "Cola",
-          "imageUrl": "https://t4.ftcdn.net/jpg/01/67/77/23/360_F_167772358_9xiEaN43hvVAj4WvzDNX4buh4hEWQKuP.jpg",
-          "price": 2
-        },
-        {
-          "id": 11,
-          "name": "Lemonade",
-          "imageUrl": "https://example.com/lemonade.jpg",
-          "price": 3
-        },
-        {
-          "id": 12,
-          "name": "Iced Tea",
-          "imageUrl": "https://example.com/iced-tea.jpg",
-          "price": 2.5
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "title": "Dessert",
-      "items": [
-        {
-          "id": 13,
-          "name": "Ice Cream",
-          "imageUrl": "https://about.kaiserpermanente.org/content/dam/kp/mykp/images/photos/things/blueberry-smoothie.jpg",
-          "price": 3
-        },
-        {
-          "id": 14,
-          "name": "Red Velvet Cake",
-          "imageUrl": "https://example.com/ice-cream.jpg",
-          "price": 4
-        },
-        {
-          "id": 15,
-          "name": "Apple Pie",
-          "imageUrl": "https://example.com/apple-pie.jpg",
-          "price": 4.5
-        }
-      ]
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": "Combos",
+    "items": [
+      {
+        "id": 1,
+        "name": "Burger & Fries",
+        "imageUrl": "https://fox2now.com/wp-content/uploads/sites/14/2024/03/GettyImages-1143340474-e1710950228126.jpg?w=2560&h=1440&crop=1",
+        "price": 11
+      },
+      {
+        "id": 2,
+        "name": "Chicken & Sweet Potato",
+        "imageUrl": "https://unislim.com/app/uploads/2022/07/shutterstock_511529920.jpg",
+        "price": 10.50
+      },
+      {
+        "id": 3,
+        "name": "Wings & Rings",
+        "imageUrl": "https://as1.ftcdn.net/v2/jpg/03/16/35/14/1000_F_316351434_nIYxpEW4KOcGSULA7eNRrdHGXH5M4Zvi.jpg",
+        "price": 13
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Burgers",
+    "items": [
+      {
+        "id": 4,
+        "name": "Classic Cheeseburger",
+        "imageUrl": "https://media.istockphoto.com/id/1309352410/photo/cheeseburger-with-tomato-and-lettuce-on-wooden-board.jpg?s=612x612&w=0&k=20&c=lfsA0dHDMQdam2M1yvva0_RXfjAyp4gyLtx4YUJmXgg=",
+        "price": 8
+      },
+      {
+        "id": 5,
+        "name": "Double Burger",
+        "imageUrl": "https://buona.com/wp-content/uploads/2021/05/burgers_dogs_double.jpg",
+        "price": 10
+      },
+      {
+        "id": 6,
+        "name": "Veggie Burger",
+        "imageUrl": "https://thenaturalnurturer.com/wp-content/uploads/2024/01/Black-Bean-Burgers-33-500x500.jpg",
+        "price": 7
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Chicken Sandwich",
+    "items": [
+      {
+        "id": 7,
+        "name": "Classic Chicken Sandwich",
+        "imageUrl": "https://broccyourbody.com/wp-content/uploads/2021/05/A7173EAD-244C-48B6-80C3-BD906DC77C2E-scaled.jpeg",
+        "price": 7
+      },
+      {
+        "id": 8,
+        "name": "Spicy Chicken Sandwich",
+        "imageUrl": "https://www.thespruceeats.com/thmb/zBVaQHpbcBiz2ohBMpRJENoJ6pU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/spicy-fried-chicken-sandwich-5220981-hero-01-f742363e943f4fc1aff902da3342765a.jpg",
+        "price": 8
+      },
+      {
+        "id": 9,
+        "name": "Grilled Chicken Sandwich",
+        "imageUrl": "https://assets.bonappetit.com/photos/5b69f160dbdc967b93bc1c42/1:1/w_2560%2Cc_limit/ba-grilled-chicken-sando.jpg",
+        "price": 7
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Chicken Wings",
+    "items": [
+      {
+        "id": 10,
+        "name": "Buffalo Wings",
+        "imageUrl": "https://bakerbynature.com/wp-content/uploads/2015/02/Sweet-and-Spicy-Sriracha-Chicken-Wings-0-6.jpg",
+        "price": 8
+      },
+      {
+        "id": 11,
+        "name": "Lemon Pepper Wings",
+        "imageUrl": "https://www.dinneratthezoo.com/wp-content/uploads/2019/01/lemon-pepper-wings-final-2.jpg",
+        "price": 8
+      },
+      {
+        "id": 12,
+        "name": "Boneless Wings",
+        "imageUrl": "https://images.ctfassets.net/l5fkpck1mwg3/7aYt4UJZs7ENrgC7NGDKF4/f6276a9d65ea4dab1e75edc8596bfa50/Party_Menu_Boneless_50_Count.png",
+        "price": 7
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Sides",
+    "items": [
+      {
+        "id": 13,
+        "name": "Classic Fries",
+        "imageUrl": "https://www.tastingtable.com/img/gallery/the-origin-of-french-fries-might-surprise-you/intro-1697912707.jpg",
+        "price": 3
+      },
+      {
+        "id": 14,
+        "name": "Onion Rings",
+        "imageUrl": "https://images.ctfassets.net/l5fkpck1mwg3/jXsq72HlveX0b9AynjXCc/acccc5cc8c17961dee220c98317843ea/DEL2022-601341-Appetizers_Beer-Battered-Onion-Rings_50_4000x3000.png",
+        "price": 4
+      },
+      {
+        "id": 15,
+        "name": "Sweet Potato Fries",
+        "imageUrl": "https://www.cookingclassy.com/wp-content/uploads/2021/10/baked-sweet-potato-fries-12.jpg",
+        "price": 4
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Drinks",
+    "items": [
+      {
+        "id": 16,
+        "name": "Cola",
+        "imageUrl": "https://t4.ftcdn.net/jpg/01/67/77/23/360_F_167772358_9xiEaN43hvVAj4WvzDNX4buh4hEWQKuP.jpg",
+        "price": 2
+      },
+      {
+        "id": 17,
+        "name": "Lemonade",
+        "imageUrl": "https://images.ctfassets.net/l5fkpck1mwg3/271tm5gwhg7AuPDucsXMk3/710df2e581d9c8ec2c459c12b05ff1bc/2023_772612_Drinks___Fresh_Brewed_Iced_Tea.png",
+        "price": 3
+      },
+      {
+        "id": 18,
+        "name": "Iced Tea",
+        "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/delish-210419-iced-tea-02-landscape-jg-1619020612.jpg?crop=1xw:0.8434864104967198xh;center,top&resize=1200:*",
+        "price": 2.5
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Dessert",
+    "items": [
+      {
+        "id": 19,
+        "name": "Ice Cream",
+        "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg",
+        "price": 3
+      },
+      {
+        "id": 20,
+        "name": "Red Velvet Cake",
+        "imageUrl": "https://www.recipetineats.com/tachyon/2016/06/Red-Velvet-Layer-Cake_4.jpg",
+        "price": 4
+      },
+      {
+        "id": 21,
+        "name": "Apple Pie",
+        "imageUrl": "https://www.ifyougiveablondeakitchen.com/wp-content/uploads/2023/04/best-apple-pie-from-scratch.jpg",
+        "price": 4.5
+      }
+    ]
+  }
+]
