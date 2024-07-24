@@ -5,16 +5,18 @@ import { useShoppingCart } from "../context/ShoppingCartContext"
 export function Navbar() {
     const { openCart, cartQuantity } = useShoppingCart()
     return (
-        <NavbarBS sticky = "top" className="bg-white shadow-sm mb-3">
+        <NavbarBS sticky = "top" className="bg-warning shadow-sm mb-3">
             <Container className="d-flex justify-content-between">
+              
             <Nav>
+                
             <Nav.Link to="/" as={NavLink}>
-                Home
+                <h2>Home</h2>
                 </Nav.Link>
             </Nav>
             <Nav className="mx-auto">
                 <Nav.Link to="/menu" as={NavLink}>
-                Menu
+               <h2>Menu</h2> 
                 </Nav.Link>
             </Nav>
             <Button

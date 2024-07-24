@@ -11,6 +11,15 @@ type ShoppingCartProps = {
 export function ShoppingCart( {isOpen} : ShoppingCartProps) {
     const { closeCart, cartItems } = useShoppingCart()
 
+    const getIngredients = (id: number) => {
+        const allItems = menuItems.flatMap(category => category.items);
+        const item = allItems.find(i => i.id === id);
+        if (!item) return {};
+        return item.ingredients.reduce((acc: { [key: string]: boolean }, ingredient: { name: string; selected: boolean }) => {
+            acc[ingredient.name] = ingredient.selected;
+            return acc;
+        }, {});
+    };
     return ( 
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">
         <Offcanvas.Header closeButton>
@@ -19,7 +28,7 @@ export function ShoppingCart( {isOpen} : ShoppingCartProps) {
         <Offcanvas.Body>
             <Stack gap={3} >
                 {cartItems.map(item => (
-                    <CartItem key={item.id} {...item} />
+                    <CartItem ingredients={getIngredients(item.id)} key={item.id} {...item} />
                     ))}
                     <div className="ms-auto fw-bold fs-5">
                         Total {formatCurrency(cartItems.reduce((total,cartItem)=> {

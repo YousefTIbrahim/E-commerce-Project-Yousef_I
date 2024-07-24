@@ -9,12 +9,15 @@ type CartItemProps = {
     ingredients: { [key: string]: boolean };
 }
 
-export function CartItem( { id, quantity }: CartItemProps) {
+export function CartItem( { id, quantity, ingredients }: CartItemProps) {
     const { removeFromCart } = useShoppingCart()
     const allItems = menuItems.flatMap(category => category.items);
     const item = allItems.find(i => i.id === id);
 
   if (item == null) return null;
+
+  const selectedIngredients = Object.keys(ingredients).filter(ingredient => ingredients[ingredient]);
+
     return (
         <Stack direction="horizontal" gap={2} className = "d-flex align-items-center">
             <img src={item.imageUrl} style = {{ width: "125px" }} />
@@ -26,7 +29,7 @@ export function CartItem( { id, quantity }: CartItemProps) {
                     }
                 </div>
                 <div className="text-muted" style = {{fontSize: ".75rem"}}>
-                    {}
+                    {selectedIngredients.join(", ")}
 
                 </div>
                 <div className="text-muted" style = {{fontSize: ".75rem"}}>

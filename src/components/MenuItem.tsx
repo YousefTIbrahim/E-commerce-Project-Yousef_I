@@ -18,15 +18,15 @@ type MenuItemProps = {
 
 export function MenuItem({ id, name, imageUrl, price, ingredients }: MenuItemProps) {
     const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart, editItem } = useShoppingCart();
+    const quantity = getItemQuantity(id);
+
+    const [isEditing, setIsEditing] = useState(false);
     const [selectedIngredients, setSelectedIngredients] = useState<{ [key: string]: boolean }>(
         ingredients.reduce((acc, ingredient) => {
             acc[ingredient.name] = ingredient.selected;
             return acc;
         }, {} as { [key: string]: boolean })
     );
-
-    const [isEditing, setIsEditing] = useState(false);
-    const quantity = getItemQuantity(id);
 
     const handleIngredientClick = (name: string) => {
         setSelectedIngredients(prev => ({
@@ -36,12 +36,16 @@ export function MenuItem({ id, name, imageUrl, price, ingredients }: MenuItemPro
     };
 
     const handleSaveChanges = () => {
-        editItem(id, selectedIngredients);
-        setIsEditing(false); // Close the editing state
+        const updatedIngredients = Object.entries(selectedIngredients).map(([name, selected]) => ({
+            name,
+            selected
+        }));
+        editItem(id, updatedIngredients);
+        setIsEditing(false);
     };
 
     const handleEditButtonClick = () => {
-        setIsEditing(true); // Open the editing state
+        setIsEditing(true);
     };
 
     return (
