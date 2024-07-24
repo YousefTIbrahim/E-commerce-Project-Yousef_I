@@ -17,6 +17,7 @@ type ShoppingCartContext = {
     increaseCartQuantity: (id: number) => void
     decreaseCartQuantity: (id: number) => void
     removeFromCart: (id: number) => void
+    editItem: (id: number, newIngredients: string[]) => void
     cartQuantity: number
     cartItems: CartItem[]
 }
@@ -76,6 +77,17 @@ export function ShoppingCartProvider( { children }: ShoppingCartProviderProps) {
             return currItems.filter(item => item.id !== id)
         })
     }
+    function editItem(id: number, newIngredients: string[]) {
+        setCartItems(currItems => {
+            return currItems.map(item => {
+                if (item.id === id) {
+                    return { ...item, ingredients: newIngredients }
+                } else {
+                    return item
+                }
+            })
+        })
+    }
 
     return  (
         <ShoppingCartContext.Provider value = {{ 
@@ -85,6 +97,7 @@ export function ShoppingCartProvider( { children }: ShoppingCartProviderProps) {
             removeFromCart,
             openCart,
             closeCart, 
+            editItem,
             cartItems,
             cartQuantity,
         }}

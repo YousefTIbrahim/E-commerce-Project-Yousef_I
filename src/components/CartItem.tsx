@@ -6,6 +6,7 @@ import { formatCurrency } from "../utilities/formatCurrency"
 type CartItemProps = {
     id: number
     quantity: number
+    ingredients: { [key: string]: boolean };
 }
 
 export function CartItem( { id, quantity }: CartItemProps) {
@@ -23,6 +24,10 @@ export function CartItem( { id, quantity }: CartItemProps) {
                         className="text-muted" style = {{fontSize: ".65rem"}}> x {quantity}
                     </span>
                     }
+                </div>
+                <div className="text-muted" style = {{fontSize: ".75rem"}}>
+                    {}
+
                 </div>
                 <div className="text-muted" style = {{fontSize: ".75rem"}}>
                     {formatCurrency(item.price)}
