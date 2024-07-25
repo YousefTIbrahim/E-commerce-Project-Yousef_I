@@ -11,15 +11,21 @@ type ShoppingCartProps = {
 export function ShoppingCart( {isOpen} : ShoppingCartProps) {
     const { closeCart, cartItems } = useShoppingCart()
 
-    const getIngredients = (id: number) => {
-        const allItems = menuItems.flatMap(category => category.items);
-        const item = allItems.find(i => i.id === id);
-        if (!item) return {};
-        return item.ingredients.reduce((acc: { [key: string]: boolean }, ingredient: { name: string; selected: boolean }) => {
-            acc[ingredient.name] = ingredient.selected;
-            return acc;
-        }, {});
-    };
+    const getIngredients = (id: number): [{ [key: string]: boolean }] => {
+        const categories = menuItems.flatMap(category => category.items);
+        const item = categories.find(i => i.id === id);
+    
+        // Ensure a single object in the array
+        const ingredientsObject: { [key: string]: boolean } = item && item.ingredients
+            ? item.ingredients.reduce((acc, ingredient) => {
+                acc[ingredient.name] = ingredient.selected;
+                return acc;
+            }, {} as { [key: string]: boolean })
+            : {}; // Default to empty object if no ingredients
+    
+        return [ingredientsObject]; // Return an array with exactly one object
+    
+    }
     return ( 
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">
         <Offcanvas.Header closeButton>

@@ -6,7 +6,7 @@ import { formatCurrency } from "../utilities/formatCurrency"
 type CartItemProps = {
     id: number
     quantity: number
-    ingredients: { [key: string]: boolean };
+    ingredients: [{ [key: string]: boolean }];
 }
 
 export function CartItem( { id, quantity, ingredients }: CartItemProps) {
@@ -14,17 +14,21 @@ export function CartItem( { id, quantity, ingredients }: CartItemProps) {
     const allItems = menuItems.flatMap(category => category.items);
     const item = allItems.find(i => i.id === id);
 
-  
-  const entries = Object.entries(ingredients);
+    if (item == null) return null;
+    
+console.log('ingredients',ingredients);
+// const entries = Object.entries(ingredients);
 
 // Step 2: Filter the entries to include only those where isSelected is true
-const selectedEntries = entries.filter(([key, item]) => item.selected);
+
+const selectedEntries = ingredients.filter((item) => item.selected === true);
+console.log(selectedEntries);
 
 // Step 3: Map the filtered entries to get an array of names
-const selectedNames = selectedEntries.map(([key, item]) => item.name);
+const selectedNames = selectedEntries.map((item) => item.name);
 
 
-console.log(selectedNames); // Output: ["Item 1", "Item 3"]
+// console.log(selectedNames); // Output: ["Item 1", "Item 3"]
     return (
         <Stack direction="horizontal" gap={2} className = "d-flex align-items-center">
             <img src={item.imageUrl} style = {{ width: "125px" }} />
