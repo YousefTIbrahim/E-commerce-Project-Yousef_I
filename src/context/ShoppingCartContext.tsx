@@ -83,6 +83,7 @@ export function ShoppingCartProvider( { children }: ShoppingCartProviderProps) {
         })
     }
     const editItem = (id: number, updatedIngredients: Ingredient[]) => {
+        console.log(updatedIngredients)
         setCartItems(prevItems =>
             prevItems.map(item =>
                 item.id === id
