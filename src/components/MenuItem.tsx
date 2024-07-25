@@ -40,7 +40,9 @@ export function MenuItem({ id, name, imageUrl, price, ingredients }: MenuItemPro
             name,
             selected
         }));
+
         editItem(id, updatedIngredients);
+        
         setIsEditing(false);
     };
 
