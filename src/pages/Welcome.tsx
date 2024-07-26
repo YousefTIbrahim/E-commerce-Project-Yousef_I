@@ -3,8 +3,30 @@ import menuItems from "../data/menu_data.json"
 
 export function Welcome() {
     return ( 
-    <>
-    <h1>Welcome</h1>
+    <><div style={{ position: 'relative', width: '100%', overflow: 'hidden' }}>
+    <img
+        src="https://biggreenegg.com/wp-content/uploads/2018/01/wings-on-big-green-egg-1600.jpg"
+        alt="Banner Image"
+        style={{ width: '100%', height: 'auto' }}
+    />
+    <div
+        style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            color: 'yellow',
+            textAlign: 'center',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            padding: '20px',
+            borderRadius: '10px'
+        }}
+    >
+    <h4>Welcome To </h4>
+    <h1 className="display-4">Yousef's Normal Wings</h1>
+</div>
+</div>
+    
     <Row md={2} className="g-3">
 <Col>
     <Card>
@@ -28,7 +50,7 @@ export function Welcome() {
   </Card>
 </Col>
 </Row>
-<div className="bg-warning">
+{/* <div className="bg-warning">
 <h2>Menu Options</h2>
 </div>
 <Row md={3} className="g-3">
@@ -39,7 +61,7 @@ export function Welcome() {
             </Card>
             </Col>
     ))}
-    </Row>
+    </Row> */}
     
     </>
  
