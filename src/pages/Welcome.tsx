@@ -1,5 +1,5 @@
 import { Card, Row, Col } from "react-bootstrap"
-import menuItems from "../data/menu_data.json"
+// import menuItems from "../data/menu_data.json"
 
 export function Welcome() {
     return ( 
